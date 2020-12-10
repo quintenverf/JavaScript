@@ -1,12 +1,19 @@
-var plaatjes = document.getElementsByTagName("img");
+var memoryCard;
+// var plaatjes = document.getElementsByTagName("img");
 var random = 0;
 var randomNumbers = [];
-pics = document.getElementById("pics");
+var firstCard, secondCard;
+var checked;
+var score1 = 0;
+var score2 = 0;
+var beurt = true;
+var TEMPsam = false;
 createPicsHolders()
-createImage()
+createRandomNumbersArray()
 createImageBackground()
 
 function createPicsHolders() {
+    pics = document.getElementById("pics");
     for (var i = 0; i < 18; i++) {
         pictureHolder = document.createElement("div");
         pictureHolder.className = "picture-holder";
@@ -14,45 +21,101 @@ function createPicsHolders() {
         pics.appendChild(pictureHolder);
     }
 }
-while (randomNumbers.length < 18) {
-    random = Math.floor(Math.random() * 18) + 1;
-    if (randomNumbers.lastIndexOf(random) == -1) {
-        randomNumbers.push(random);
+
+function createRandomNumbersArray() {
+    while (randomNumbers.length < 18) {
+        random = Math.floor(Math.random() * 18) + 1;
+        if (randomNumbers.lastIndexOf(random) == -1) {
+            randomNumbers.push(random);
+        }
     }
 }
 
-random = 0;
-for (var plaatje in plaatjes) {
-    plaatjes[plaatje].src = "img/foto" + randomNumbers[random] + ".jpg";
-    random++
-}
-
-function createImage() {
-    pictureHolders = document.getElementsByClassName("picture-holder");
-    for (var i = 0; i < pictureHolders.length; i++){
-        favoriet = document.createElement("div");
-        favoriet.className = "favoriet";
-        favoriet.id = "favoriet_"+ (i+1);
-        logoPlaatje = document.createElement("img");
-        logoPlaatje.src = "img/foto" + (i+1) + ".jpg";
-        logoPlaatje.id = (i+1);
-        logoPlaatje.addEventListener("dblclick", function () {
-            createImageBackground(this.id);
-        });
-        pictureHolders[i].appendChild(favoriet);
-        pictureHolders[i].appendChild(logoPlaatje);
-    }
-}
 
 function createImageBackground(id) {
-    console.log("gaat om foto" + id);
-    notsofavoriet = document.getElementsByClassName("favoriet");
-
-    for (var i = 0; i < notsofavoriet.length; i++){
-        notsofavoriet[i].style.backgroundImage = "none";
+    var pictureHolders = document.getElementsByClassName("picture-holder");
+    for (var teller = 0; teller < pictureHolders.length; teller++){
+        memoryCard = document.createElement("img");
+        memoryCard.src = "img/background.jpg";
+        memoryCard.id = randomNumbers[teller];
+        memoryCard.addEventListener("click", function () {
+            showPicsWhenCLickedOn(this.id);
+            givePicturesId(this.id);
+        });
+        pictureHolders[teller].appendChild(memoryCard);
     }
-
-    favoriet = document.getElementById("favoriet_" + id)
-    // favoriet.style.backgroundImage = "('url/img/.jpg')";
 }
 
+function showPicsWhenCLickedOn(id) {
+    if (TEMPsam == false) {
+        var clickedPicture = document.getElementById(id);
+        clickedPicture.src = "img/foto" + id + ".jpg";
+
+    }
+}
+
+function givePicturesId(id) {
+    if (firstCard && !secondCard) secondCard = id;
+    if (!firstCard) firstCard = id;
+    if (firstCard && secondCard) {
+        TEMPsam = true;
+        clickedOnBothCards = true;
+        var idOne = parseInt(firstCard);
+        var idTwo = parseInt(secondCard);
+        checkForSamePictures(idOne, idTwo)
+    }
+}
+
+function checkForSamePictures(idOne, idTwo) {
+    if (idOne == (idTwo + 9)) {
+        checked = true;
+    } else if(idOne == (idTwo - 9)) {
+        checked = true;
+    }
+}
+
+function buttonNext() {
+    var idOne = parseInt(firstCard);
+    var idTwo = parseInt(secondCard);
+    addScoreToPlayer();
+    resetPicturesWhenCombinationFalse(idOne, idTwo);
+    resetValuesAfterTurn();
+    TEMPsam = false;
+    console.log(idOne);
+    console.log(idTwo);
+    console.log(firstCard);
+    console.log(secondCard);
+}
+
+function resetPicturesWhenCombinationFalse(idOne, idTwo) {
+    if (checked == false) {
+        if (beurt == true) beurt = false;
+        else if (beurt == false) beurt = true;
+        var falsePictureOne = document.getElementById(idOne);
+        falsePictureOne.src = "img/background.jpg";
+        var falsePictureTwo = document.getElementById(idTwo);
+        falsePictureTwo.src = "img/background.jpg";
+    }
+}
+
+
+function addScoreToPlayer() {
+    if (checked == true) {
+        if (beurt == true) {
+            score1 += 1;
+            document.getElementById("player1-score").innerText = "Score:" + score1;
+        } else if (beurt == false){
+            score2 += 1;
+            document.getElementById("player2-score").innerText = "Score:" + score2;
+        }
+
+    }
+}
+
+function resetValuesAfterTurn() {
+    if (secondCard) {
+        firstCard = null;
+        secondCard = null;
+        checked = false;
+    }
+}
