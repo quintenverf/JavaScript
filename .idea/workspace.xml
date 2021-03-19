@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0179c05-1573-4c1f-9be9-05148d3e9066" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bijles js 11/bijles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bijles js 11/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bijles js 11/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/toets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-toe/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-toe/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-toe/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -33,9 +40,35 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HTML" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScript/bijles js 11/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="toets.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/toets.js" working-dir="$PROJECT_DIR$/test">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.toets.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -46,7 +79,13 @@
       <option name="presentableId" value="Default" />
       <updated>1605777928136</updated>
       <workItem from="1605777929191" duration="62341000" />
-      <workItem from="1607589500123" duration="944000" />
+      <workItem from="1607589500123" duration="3776000" />
+      <workItem from="1610616380836" duration="30000" />
+      <workItem from="1612255605033" duration="1516000" />
+      <workItem from="1613734580584" duration="7938000" />
+      <workItem from="1614716440094" duration="762000" />
+      <workItem from="1614853274056" duration="83000" />
+      <workItem from="1616151208320" duration="136000" />
     </task>
     <servers />
   </component>
@@ -58,9 +97,26 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="628" y="505" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1536.832/0.0.3440.1400@0.0.3440.1400" timestamp="1606468992175" />
-    <state x="283" y="151" key="FileChooserDialogImpl" timestamp="1605778379732">
+    <state x="634" y="257" key="FileChooserDialogImpl" timestamp="1614853356897">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="634" y="257" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.3440.1400@0.0.3440.1400" timestamp="1614853356897" />
+    <state x="283" y="151" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612257410875" />
+    <state width="1494" height="227" key="GridCell.Tab.0.bottom" timestamp="1612257410898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="283" y="151" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605778379732" />
+    <state width="1494" height="227" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612257410898" />
+    <state width="1494" height="227" key="GridCell.Tab.0.center" timestamp="1612257410896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1494" height="227" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612257410896" />
+    <state width="1494" height="227" key="GridCell.Tab.0.left" timestamp="1612257410896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1494" height="227" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612257410896" />
+    <state width="1494" height="227" key="GridCell.Tab.0.right" timestamp="1612257410898">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1494" height="227" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612257410898" />
   </component>
 </project>
